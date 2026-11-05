@@ -1,0 +1,49 @@
+:root {
+  --tinta: #14232b;
+  --tinta-suave: #4a5d66;
+  --fondo: #eef2f4;
+  --superficie: #ffffff;
+  --linea: #cdd8dd;
+  --acento: #0f6b6b;
+  --acento-oscuro: #0a4f4f;
+  --peligro: #b42318;
+  --aviso-ok: #e2f3ec;
+  --aviso-error: #fbe9e7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tinta: #e6eef1; --tinta-suave: #a5b6bd; --fondo: #0f1a1f; --superficie: #17262d;
+    --linea: #2c3f48; --acento: #4fc3bd; --acento-oscuro: #7fd9d4; --peligro: #ff8a7e;
+    --aviso-ok: #12352d; --aviso-error: #3a1d1a;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--tinta); background: var(--fondo); }
+.barra { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; justify-content: space-between; padding: 1.25rem clamp(1rem, 4vw, 3rem); background: var(--acento); color: #fff; }
+.barra h1 { margin: 0; font-size: 1.5rem; font-weight: 700; }
+.ingreso { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.ingreso label { font-size: .9rem; }
+input { padding: .5rem .75rem; border: 1px solid var(--linea); border-radius: 6px; font: inherit; }
+button { padding: .5rem 1rem; border: 0; border-radius: 6px; font: inherit; font-weight: 600; cursor: pointer; background: var(--acento-oscuro); color: #fff; }
+.ingreso button { background: #fff; color: #0a4f4f; }
+button.secundario { background: transparent; color: var(--peligro); border: 1px solid var(--peligro); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+main, .aviso { max-width: 70rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem); }
+.aviso { margin-top: 1rem; padding: .75rem 1rem; border-radius: 6px; background: var(--aviso-ok); }
+.aviso.error { background: var(--aviso-error); color: var(--peligro); }
+section { margin: 1.5rem 0; }
+h2 { font-size: 1.15rem; margin: 0 0 .5rem; }
+.perfil p { margin: 0; color: var(--tinta-suave); }
+.tabla-wrap { overflow-x: auto; background: var(--superficie); border: 1px solid var(--linea); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .65rem .85rem; text-align: left; border-bottom: 1px solid var(--linea); white-space: nowrap; }
+th { font-size: .85rem; color: var(--tinta-suave); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+td.vacio { color: var(--tinta-suave); white-space: normal; }
+.total { margin: .5rem 0 0; font-weight: 600; }
+main.login { max-width: 26rem; margin: 2rem auto; padding: 1.5rem; background: var(--superficie); border: 1px solid var(--linea); border-radius: 8px; }
+.login form { display: grid; gap: .5rem; }
+.login input { width: 100%; }
+.login button { margin-top: .75rem; }
+.ayuda { color: var(--tinta-suave); font-size: .9rem; }

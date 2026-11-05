@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrículas · UNIAJC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <h1>Matrículas académicas</h1>
+    <div class="ingreso">
+      <span id="usuario-actual"></span>
+      <button type="button" id="btn-salir">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+
+  <main id="contenido">
+    <section class="perfil" aria-labelledby="t-perfil">
+      <h2 id="t-perfil">Mis datos</h2>
+      <p id="perfil"></p>
+    </section>
+
+    <section aria-labelledby="t-oferta">
+      <h2 id="t-oferta">Grupos disponibles</h2>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Asignatura</th><th>Grupo</th><th>Horario</th><th>Créditos</th><th>Cupos</th><th>Acción</th></tr></thead>
+          <tbody id="tabla-oferta"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="t-carga">
+      <h2 id="t-carga">Mi carga académica</h2>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Asignatura</th><th>Grupo</th><th>Horario</th><th>Créditos</th></tr></thead>
+          <tbody id="tabla-carga"></tbody>
+        </table>
+      </div>
+      <p id="total-creditos" class="total"></p>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

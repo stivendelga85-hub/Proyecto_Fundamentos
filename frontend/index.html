@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · Matrículas UNIAJC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra"><h1>Matrículas académicas</h1></header>
+  <p id="aviso" class="aviso" role="status" aria-live="polite" hidden></p>
+  <main class="login">
+    <h2>Iniciar sesión</h2>
+    <form id="form-login">
+      <label for="username">Usuario</label>
+      <input id="username" name="username" required autocomplete="username">
+      <label for="password">Contraseña</label>
+      <input id="password" name="password" type="password" required autocomplete="current-password">
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="ayuda">Usuarios de prueba: ana, luis, sofia (estudiantes), coordinador y admin. Contraseña: Demo2026</p>
+  </main>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
+  
